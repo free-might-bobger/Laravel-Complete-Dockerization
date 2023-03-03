@@ -13,23 +13,23 @@ services:
         - php
 
     # PHP Service
-    php:
-        build:
-            context: .
-            target: php
-            args:
-                - APP_ENV=${APP_ENV}
-        environment:
-            - APP_ENV=${APP_ENV}
-            - CONTAINER_ROLE=app
-        working_dir: /var/www
-        volumes:
-            - ./:/var/www
-        ports:
-            - 8000:8000
-        depends_on:
-            - database
-            - redis
+    # php:
+    #     build:
+    #         context: .
+    #         target: php
+    #         args:
+    #             - APP_ENV=${APP_ENV}
+    #     environment:
+    #         - APP_ENV=${APP_ENV}
+    #         - CONTAINER_ROLE=app
+    #     working_dir: /var/www
+    #     volumes:
+    #         - ./:/var/www
+    #     ports:
+    #         - 8000:8000
+    #     depends_on:
+    #         - database
+    #         - redis
 
     # PHP Service
     # websocket:
