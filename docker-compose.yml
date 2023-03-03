@@ -81,7 +81,7 @@ services:
     #         - APP_ENV=${APP_ENV}
     #         - CONTAINER_ROLE=queue
     #     working_dir: /var/www
-    #     volumes:
+    ##     volumes:
     #         - ./:/var/www
 
     # Node Server
