@@ -1,3 +1,10 @@
+FROM mysql:8.0 as database
+
+ENTRYPOINT [ "./entry/entrypoint.sh" ]
+
+
+
+
 FROM php:8.1 as php
 
 RUN apt-get update -y
@@ -15,7 +22,7 @@ COPY --from=composer:2.3.5 /usr/bin/composer /usr/bin/composer
 
 ENV PORT=8000
 
-ENTRYPOINT [ "./entry/entrypoint.sh" ]
+
 
 # ==============================================================================
 #  node
